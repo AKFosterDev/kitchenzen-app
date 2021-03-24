@@ -2,7 +2,7 @@
 	"name": "kitchzen_app",
 	"type": "module",
 	"version": "1.0.0",
-	"description": "",
+	"description": "E-commerce web application for kitchen products",
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
@@ -18,7 +18,11 @@
 	},
 	"homepage": "https://github.com/AKFosterDev/kitchenzen-app#readme",
 	"dependencies": {
-		"express": "^4.17.1",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"eslint": "^7.22.0",
+		"eslint-plugin-react": "^7.23.1",
 		"nodemon": "^2.0.7"
 	}
 }
