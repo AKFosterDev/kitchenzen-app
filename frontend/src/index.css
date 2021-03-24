@@ -67,6 +67,10 @@ a {
 	color: #171717;
 }
 
+a:hover {
+	color: #fbab00;
+}
+
 ul {
 	padding: 0;
 	margin: 0;
@@ -164,6 +168,10 @@ header .nav-link {
 
 .min-30 {
 	min-width: 30rem;
+}
+
+.mr-2 {
+	margin-right: 2rem;
 }
 
 /* Images */
