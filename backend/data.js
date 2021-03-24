@@ -17,7 +17,6 @@ const data = {
 	],
 	products: [
 		{
-			_id: '1',
 			name: 'Ninja Food Processor',
 			category: 'Small Appliances',
 			image: '/images/p1.png',
@@ -29,7 +28,6 @@ const data = {
 			description: 'Professional quality food processor.',
 		},
 		{
-			_id: '2',
 			name: 'Cuisinart Food Processor',
 			category: 'Small Appliances',
 			image: '/images/p2.png',
@@ -41,7 +39,6 @@ const data = {
 			description: 'Elemental 13 cup food processor and dicing kit.',
 		},
 		{
-			_id: '3',
 			name: 'Mueller Ultra Power Juicer',
 			category: 'Small Appliances',
 			image: '/images/p3.png',
@@ -53,7 +50,6 @@ const data = {
 			description: 'Ultra power juicer with easy clean extractor press.',
 		},
 		{
-			_id: '4',
 			name: 'Cuisinart Stainless Cookware Set',
 			category: 'Cookware',
 			image: '/images/p4.png',
@@ -65,7 +61,6 @@ const data = {
 			description: "Chef's classic stainless 11 piece cookware set.",
 		},
 		{
-			_id: '5',
 			name: 'Michelangelo Cookware Set',
 			category: 'Cookware',
 			image: '/images/p5.png',
@@ -77,7 +72,6 @@ const data = {
 			description: 'Professional anodized 10 piece cookware set.',
 		},
 		{
-			_id: '6',
 			name: 'Chicago Cutlery Knife Block Set',
 			category: 'Cutlery',
 			image: '/images/p6.png',

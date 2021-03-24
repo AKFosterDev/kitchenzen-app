@@ -5,6 +5,7 @@ import User from '../models/userModel.js'
 
 const userRouter = express.Router()
 
+// Seed the database
 userRouter.get(
 	'/seed',
 	expressAsyncHandler(async (req, res) => {
