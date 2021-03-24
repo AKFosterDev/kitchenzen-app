@@ -11,6 +11,7 @@ body {
 	height: 100vh;
 	font-size: 1.6rem;
 	font-family: 'Montserrat', Arial, sans-serif;
+	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -82,6 +83,7 @@ button {
 	border: 0.1rem solid #a4a4a4;
 	font-size: 1.6rem;
 	font-family: 'Montserrat', Arial, sans-serif;
+	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #f8f8f8;
@@ -200,6 +202,22 @@ img.large {
 	color: #20a020;
 }
 
-.error {
+.danger {
 	color: #a0202a;
+}
+
+.alert {
+	padding: 1rem;
+	border: 0.1rem solid transparent;
+	border-radius: 0.5rem;
+}
+
+.alert-info {
+	color: #2020a0;
+	background-color: #e8e8ff;
+}
+
+.alert-danger {
+	color: #a02020;
+	background-color: #ffe0e0;
 }
