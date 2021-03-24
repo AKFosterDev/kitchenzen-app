@@ -218,6 +218,6 @@ img.large {
 }
 
 .alert-danger {
-	color: #a02020;
-	background-color: #ffe0e0;
+	color: #dd2e1f;
+	background-color: rgba(221, 46, 31, 25%);
 }
