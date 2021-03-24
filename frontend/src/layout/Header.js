@@ -1,20 +1,28 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
+	const cart = useSelector(state => state.cart)
+	const { cartItems } = cart
+
 	return (
 		<header className='row'>
 			<div>
-				<a href='/'>
+				<Link to='/'>
 					<img className='logo' src='../images/logo.png' alt='KitchZen Logo' />
-				</a>
+				</Link>
 			</div>
 			<div>
-				<a className='nav-link' href='/cart'>
+				<Link className='nav-link' to='/cart'>
 					Cart
-				</a>
-				<a className='nav-link' href='/signin'>
+					{cartItems.length > 0 && (
+						<span className='badge'>{cartItems.length}</span>
+					)}
+				</Link>
+				<Link className='nav-link' to='/signin'>
 					Sign In
-				</a>
+				</Link>
 			</div>
 		</header>
 	)
