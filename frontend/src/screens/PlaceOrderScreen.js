@@ -18,6 +18,10 @@ const PlaceOrderScreen = (props) => {
 	cart.taxPrice = toPrice(0.15 * cart.itemsPrice)
 	cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice
 
+	const placeOrderHandler = () => {
+		// TODO dispatch place order action
+	}
+
 	return (
 		<div>
 			<CheckoutSteps step1 step2 step3 step4 />
@@ -82,19 +86,19 @@ const PlaceOrderScreen = (props) => {
 							<li>
 								<div className='row'>
 									<div>Subtotal</div>
-									<div>${cart.itemsPrice}</div>
+									<div>${cart.itemsPrice.toFixed(2)}</div>
 								</div>
 							</li>
 							<li>
 								<div className='row'>
 									<div>Shipping</div>
-									<div>${cart.shippingPrice}</div>
+									<div>${cart.shippingPrice.toFixed(2)}</div>
 								</div>
 							</li>
 							<li>
 								<div className='row'>
 									<div>Tax</div>
-									<div>${cart.taxPrice}</div>
+									<div>${cart.taxPrice.toFixed(2)}</div>
 								</div>
 							</li>
 							<li>
@@ -102,8 +106,20 @@ const PlaceOrderScreen = (props) => {
 									<div>
 										<strong>Order Total</strong>{' '}
 									</div>
-									<div>${cart.totalPrice}</div>
+									<div>
+										<strong>${cart.totalPrice.toFixed(2)}</strong>
+									</div>
 								</div>
+							</li>
+							<li>
+								<button
+									className='primary block'
+									type='button'
+									onClick={placeOrderHandler}
+									disabled={cart.cartItems.length === 0}
+								>
+									Place Order
+								</button>
 							</li>
 						</ul>
 					</div>
