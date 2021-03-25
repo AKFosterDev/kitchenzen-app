@@ -1,6 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import CartScreen from './screens/CartScreen'
@@ -9,8 +8,8 @@ import ProductScreen from './screens/ProductScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import ShippingAddressScreen from './screens/ShippingAddressScreen'
 import SigninScreen from './screens/SigninScreen'
-
 import PaymentMethodScreen from './screens/PaymentMethodScreen'
+import PlaceOrderScreen from './screens/PlaceOrderScreen'
 
 function App() {
 	return (
@@ -24,6 +23,7 @@ function App() {
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/shipping' component={ShippingAddressScreen} />
 					<Route path='/payment' component={PaymentMethodScreen} />
+					<Route path='/placeorder' component={PlaceOrderScreen} />
 					<Route path='/' component={HomeScreen} exact />
 				</main>
 				<Footer />
