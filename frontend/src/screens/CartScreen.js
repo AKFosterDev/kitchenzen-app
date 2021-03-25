@@ -35,7 +35,10 @@ const CartScreen = props => {
 				<h1>Shopping Cart</h1>
 				{cartItems.length === 0 ? (
 					<MessageBox>
-						Cart is empty. <Link to='/'>Go Shopping</Link>
+						Cart is empty.{' '}
+						<Link className='gold-link' to='/'>
+							Go Shopping
+						</Link>
 					</MessageBox>
 				) : (
 					<ul>
