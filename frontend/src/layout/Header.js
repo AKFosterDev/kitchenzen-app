@@ -35,9 +35,20 @@ const Header = () => {
 							{userInfo.name} <i className='fas fa-caret-down'></i>
 						</Link>
 						<ul className='dropdown-content'>
-							<Link to='#signout' onClick={signoutHandler}>
-								Sign Out
-							</Link>
+							<li>
+								<Link className='user-dropdown' to='/orderhistory'>
+									Order History
+								</Link>
+							</li>
+							<li>
+								<Link
+									className='user-dropdown'
+									to='#signout'
+									onClick={signoutHandler}
+								>
+									Sign Out
+								</Link>
+							</li>
 						</ul>
 					</div>
 				) : (

@@ -123,6 +123,10 @@ button.block {
 	width: 100%;
 }
 
+button.small {
+	font-size: 1.2rem;
+}
+
 /* Header */
 header .nav-link,
 header .user-link {
@@ -312,6 +316,15 @@ img.large {
 
 .dropdown:hover .dropdown-content {
 	display: block;
+	background-color: #f0efef;
+}
+
+.user-dropdown {
+	font-weight: 600;
+}
+
+.user-dropdown:hover {
+	color: #dd2e1f;
 }
 
 /* Checkout Steps */
@@ -326,4 +339,25 @@ img.large {
 .checkout-steps > div.active {
 	border-top-color: #f08000;
 	color: #f08000;
+}
+
+/* Table */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table tbody tr:nth-of-type(odd) {
+	background-color: #f4f4f4;
+}
+
+.table td,
+.table th {
+	text-align: left;
+	border: 0.1rem solid #e4e4e4;
+	padding: 0.5rem;
+}
+
+.table button {
+	margin: 0 0.2rem;
 }
