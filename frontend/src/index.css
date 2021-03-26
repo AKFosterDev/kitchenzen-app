@@ -270,6 +270,11 @@ img.large {
 	background-color: rgba(221, 46, 31, 25%);
 }
 
+.alert-success {
+	color: rgb(32, 160, 32);
+	background-color: rgba(32, 160, 32, 25%);
+}
+
 /* Form */
 .form {
 	max-width: 60rem;
