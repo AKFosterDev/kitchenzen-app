@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { createProduct, listProducts } from '../actions/productActions'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
 
-const ProductListScreen = (props) => {
+export default function ProductListScreen(props) {
 	const productList = useSelector((state) => state.productList)
 	const { loading, error, products } = productList
 
@@ -16,29 +16,25 @@ const ProductListScreen = (props) => {
 		success: successCreate,
 		product: createdProduct,
 	} = productCreate
-
 	const dispatch = useDispatch()
-
 	useEffect(() => {
 		if (successCreate) {
 			dispatch({ type: PRODUCT_CREATE_RESET })
-			props.history.push(`/product/${createProduct._id}/edit`)
+			props.history.push(`/product/${createdProduct._id}/edit`)
 		}
 		dispatch(listProducts())
-	}, [dispatch, props.history, createProduct, successCreate])
-
+	}, [createdProduct, dispatch, props.history, successCreate])
+	const deleteHandler = () => {
+		/// TODO: dispatch delete action
+	}
 	const createHandler = () => {
 		dispatch(createProduct())
 	}
-
-	const deleteHandler = () => {
-		//dispatch delete action
-	}
 	return (
-		<div className='screen-top'>
+		<div>
 			<div className='row'>
 				<h1>Products</h1>
-				<button className='primary' type='button' onClick={createHandler}>
+				<button type='button' className='primary' onClick={createHandler}>
 					Create Product
 				</button>
 			</div>
@@ -70,8 +66,8 @@ const ProductListScreen = (props) => {
 								<td>{product.brand}</td>
 								<td>
 									<button
-										className='small'
 										type='button'
+										className='small'
 										onClick={() =>
 											props.history.push(`/product/${product._id}/edit`)
 										}
@@ -79,8 +75,8 @@ const ProductListScreen = (props) => {
 										Edit
 									</button>
 									<button
-										className='small'
 										type='button'
+										className='small'
 										onClick={() => deleteHandler(product)}
 									>
 										Delete
@@ -94,5 +90,3 @@ const ProductListScreen = (props) => {
 		</div>
 	)
 }
-
-export default ProductListScreen
