@@ -36,6 +36,11 @@ const Header = () => {
 						</Link>
 						<ul className='dropdown-content'>
 							<li>
+								<Link className='user-dropdown' to='/profile'>
+									User Profile
+								</Link>
+							</li>
+							<li>
 								<Link className='user-dropdown' to='/orderhistory'>
 									Order History
 								</Link>
