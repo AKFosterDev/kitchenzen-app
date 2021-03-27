@@ -319,11 +319,13 @@ img.large {
 	background-color: #f0efef;
 }
 
-.user-dropdown {
+.user-dropdown,
+.admin-dropdown {
 	font-weight: 600;
 }
 
-.user-dropdown:hover {
+.user-dropdown:hover,
+.admin-dropdown:hover {
 	color: #dd2e1f;
 }
 

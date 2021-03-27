@@ -61,6 +61,35 @@ const Header = () => {
 						Sign In
 					</Link>
 				)}
+				{userInfo && userInfo.isAdmin && (
+					<div className='dropdown'>
+						<Link className='user-link' to='#admin'>
+							Admin <i className='fas fa-caret-down'></i>
+						</Link>
+						<ul className='dropdown-content'>
+							<li>
+								<Link className='admin-dropdown' to='/dashboard'>
+									Dashboard
+								</Link>
+							</li>
+							<li>
+								<Link className='admin-dropdown' to='/productlist'>
+									Products
+								</Link>
+							</li>
+							<li>
+								<Link className='admin-dropdown' to='/orderlist'>
+									Orders
+								</Link>
+							</li>
+							<li>
+								<Link className='admin-dropdown' to='/userlist'>
+									Users
+								</Link>
+							</li>
+						</ul>
+					</div>
+				)}
 			</div>
 		</header>
 	)
